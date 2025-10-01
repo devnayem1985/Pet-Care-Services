@@ -1,0 +1,795 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="https://static.readdy.ai/static/e.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pet Care Services</title>
+    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#f59e0b',
+                        secondary: '#fcd34d'
+                    },
+                    borderRadius: {
+                        'none': '0px',
+                        'sm': '4px',
+                        DEFAULT: '8px',
+                        'md': '12px',
+                        'lg': '16px',
+                        'xl': '20px',
+                        '2xl': '24px',
+                        '3xl': '32px',
+                        'full': '9999px',
+                        'button': '8px'
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
+    <style>
+        :where([class^="ri-"])::before {
+            content: "\f3c2";
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: #333;
+        }
+
+        input:focus,
+        textarea:focus,
+        select:focus {
+            outline: none;
+        }
+
+        input[type="number"]::-webkit-inner-spin-button,
+        input[type="number"]::-webkit-outer-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+    </style>
+</head>
+
+<body class="bg-[#FFF9F0]">
+    <!-- Header -->
+    <header class="bg-white shadow-sm">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="flex items-center">
+                <h1 class="text-2xl font-['Pacifico'] text-primary">logo</h1>
+            </div>
+            <nav class="hidden md:flex space-x-8">
+                <a href="#" class="font-medium text-gray-800 hover:text-primary">Home</a>
+                <a href="#" class="font-medium text-gray-800 hover:text-primary">Services</a>
+                <a href="#" class="font-medium text-gray-800 hover:text-primary">About Us</a>
+                <a href="#" class="font-medium text-gray-800 hover:text-primary">Testimonials</a>
+                <a href="#" class="font-medium text-gray-800 hover:text-primary">Contact</a>
+            </nav>
+            <div class="flex items-center">
+                <button onclick="document.querySelector('#booking-form').scrollIntoView({behavior: 'smooth'})" class="bg-primary text-white px-6 py-2 !rounded-button font-medium hover:bg-amber-600 transition-colors duration-300 whitespace-nowrap">Book Now</button>
+                <button class="md:hidden ml-4 w-10 h-10 flex items-center justify-center">
+<i class="ri-menu-line text-xl"></i>
+</button>
+            </div>
+        </div>
+    </header>
+    <!-- Hero Section -->
+    <section class="relative min-h-[800px] flex items-center">
+        <div class="absolute inset-0">
+            <video class="w-full h-full object-cover" autoplay loop muted playsinline>
+<source src="https://public.readdy.ai/ai/video_res/e9daa75f-f812-4420-87df-c131caf42e64.mp4" type="video/mp4">
+</video>
+        </div>
+        <div class="absolute inset-0 bg-black/30"></div>
+        <div class="container mx-auto px-4 w-full relative">
+            <div class="max-w-2xl py-20">
+                <h1 class="text-5xl md:text-6xl font-bold text-white mb-8">Love, Care, And Everything Pets Need</h1>
+                <p class="text-xl text-white/90 mb-10">Professional pet care services tailored to your furry friend's needs. We treat your pets like family.</p>
+                <div class="flex flex-wrap gap-4">
+                    <button onclick="document.querySelector('#booking-form').scrollIntoView({behavior: 'smooth'})" class="bg-primary text-white px-8 py-4 !rounded-button font-medium hover:bg-amber-600 transition-colors duration-300 whitespace-nowrap text-lg">Book a Service</button>
+                    <button class="bg-white text-gray-800 px-8 py-4 !rounded-button font-medium border border-gray-300 hover:bg-gray-100 transition-colors duration-300 whitespace-nowrap text-lg">Learn More</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Service Categories -->
+    <section class="pt-24 pb-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold mb-6">Our Complete Pet Care Services</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">We offer comprehensive care solutions to keep your pets happy, healthy, and thriving</p>
+            </div>
+            <div class="grid md:grid-cols-2 gap-8 max-w-[1440px] mx-auto">
+                <div class="bg-white rounded-lg overflow-hidden shadow-md">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://readdy.ai/api/search-image?query=A%20professional%20groomer%20gently%20washing%20a%20golden%20retriever%20in%20a%20modern%20pet%20salon.%20The%20dog%20looks%20relaxed%20and%20content%20as%20the%20groomer%20applies%20shampoo.%20The%20background%20shows%20a%20clean%2C%20well-equipped%20grooming%20station%20with%20high-quality%20pet%20care%20products%20neatly%20arranged.%20Soft%2C%20natural%20lighting%20creates%20a%20warm%2C%20inviting%20atmosphere.&width=600&height=400&seq=2&orientation=landscape"
+                            alt="Pet Grooming" class="w-full h-full object-cover object-top">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Professional Grooming</h3>
+                        <p class="text-gray-600 mb-4">Complete grooming services including bathing, haircuts, nail trimming, and ear cleaning by certified pet stylists.</p>
+                        <a href="#" class="text-primary font-medium flex items-center group">
+Learn more
+<span class="w-5 h-5 ml-2 flex items-center justify-center transition-transform duration-300 group-hover:translate-x-1">
+<i class="ri-arrow-right-line"></i>
+</span>
+</a>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg overflow-hidden shadow-md">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://readdy.ai/api/search-image?query=A%20professional%20pet%20sitter%20playing%20with%20dogs%20in%20a%20spacious%2C%20sunlit%20backyard.%20The%20scene%20shows%20multiple%20dogs%20of%20different%20breeds%20enjoying%20playtime%20with%20toys.%20The%20pet%20sitter%20is%20engaging%20with%20the%20animals%2C%20throwing%20a%20ball%20while%20other%20dogs%20wait%20excitedly%20for%20their%20turn.%20The%20yard%20is%20well-maintained%20with%20green%20grass%20and%20some%20pet-friendly%20play%20equipment.&width=600&height=400&seq=3&orientation=landscape"
+                            alt="Pet Sitting" class="w-full h-full object-cover object-top">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Pet Sitting & Daycare</h3>
+                        <p class="text-gray-600 mb-4">Supervised care in a safe, fun environment. Daily exercise, playtime, and socialization with other friendly pets.</p>
+                        <a href="#" class="text-primary font-medium flex items-center group">
+Learn more
+<span class="w-5 h-5 ml-2 flex items-center justify-center transition-transform duration-300 group-hover:translate-x-1">
+<i class="ri-arrow-right-line"></i>
+</span>
+</a>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg overflow-hidden shadow-md">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://readdy.ai/api/search-image?query=A%20professional%20dog%20walker%20taking%20multiple%20dogs%20on%20leashes%20through%20a%20beautiful%20park%20path.%20The%20dogs%20are%20various%20breeds%20and%20sizes%2C%20all%20walking%20nicely%20together.%20The%20walker%20is%20attentive%20and%20professional%2C%20wearing%20appropriate%20outdoor%20gear.%20The%20park%20setting%20has%20trees%2C%20a%20walking%20path%2C%20and%20natural%20scenery%2C%20with%20soft%20morning%20light%20filtering%20through%20the%20trees.&width=600&height=400&seq=4&orientation=landscape"
+                            alt="Dog Walking" class="w-full h-full object-cover object-top">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Dog Walking Services</h3>
+                        <p class="text-gray-600 mb-4">Scheduled walks tailored to your pet's energy level and needs. GPS tracking and detailed reports after each walk.</p>
+                        <a href="#" class="text-primary font-medium flex items-center group">
+Learn more
+<span class="w-5 h-5 ml-2 flex items-center justify-center transition-transform duration-300 group-hover:translate-x-1">
+<i class="ri-arrow-right-line"></i>
+</span>
+</a>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg overflow-hidden shadow-md">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://readdy.ai/api/search-image?query=A%20professional%20pet%20trainer%20working%20with%20a%20dog%20in%20a%20training%20session.%20The%20trainer%20is%20demonstrating%20commands%20while%20the%20dog%20attentively%20follows%20instructions.%20The%20setting%20is%20a%20clean%2C%20well-equipped%20training%20facility%20with%20training%20equipment%20visible%20in%20the%20background.%20The%20atmosphere%20shows%20positive%20reinforcement%20training%20methods%20being%20used%2C%20with%20treats%20visible%20in%20the%20trainers%20hand.&width=600&height=400&seq=5&orientation=landscape"
+                            alt="Pet Training" class="w-full h-full object-cover object-top">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Training & Behavior</h3>
+                        <p class="text-gray-600 mb-4">Positive reinforcement training for puppies and adult dogs. Address behavioral issues with our certified trainers.</p>
+                        <a href="#" class="text-primary font-medium flex items-center group">
+Learn more
+<span class="w-5 h-5 ml-2 flex items-center justify-center transition-transform duration-300 group-hover:translate-x-1">
+<i class="ri-arrow-right-line"></i>
+</span>
+</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Why Pet Owners Trust Us -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Why Pet Owners Trust Us</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Our commitment to quality care and customer satisfaction has made us the preferred choice for pet owners.</p>
+            </div>
+            <div class="grid md:grid-cols-4 gap-8 max-w-6xl mx-auto">
+                <div class="bg-white rounded-lg p-8 relative border border-amber-100">
+                    <div class="w-20 h-20 rounded-full overflow-hidden absolute -top-10 left-1/2 -translate-x-1/2 ring-4 ring-amber-100">
+                        <img src="https://readdy.ai/api/search-image?query=A%20close-up%20portrait%20of%20a%20happy%20pet%20owner%20smiling%20at%20the%20camera.%20Professional%20headshot%20with%20warm%20lighting%20and%20blurred%20background%2C%20showing%20genuine%20happiness%20and%20satisfaction.&width=80&height=80&seq=17&orientation=squarish"
+                            alt="Client" class="w-full h-full object-cover">
+                    </div>
+                    <div class="text-center pt-12">
+                        <h3 class="text-4xl font-bold text-primary mb-4">500+</h3>
+                        <p class="text-gray-600 mb-6">Happy Clients</p>
+                        <p class="text-gray-500 text-sm italic">"Exceptional service that exceeded all expectations. Truly the best care for our furry friends!"</p>
+                        <p class="text-primary font-medium mt-4">Sarah M.</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg p-8 relative border border-amber-100">
+                    <div class="w-20 h-20 rounded-full overflow-hidden absolute -top-10 left-1/2 -translate-x-1/2 ring-4 ring-amber-100">
+                        <img src="https://readdy.ai/api/search-image?query=A%20close-up%20portrait%20of%20a%20professional%20pet%20care%20specialist%20smiling%20confidently%20at%20the%20camera.%20Professional%20headshot%20with%20warm%20lighting%20and%20blurred%20background%2C%20showing%20expertise%20and%20trustworthiness.&width=80&height=80&seq=18&orientation=squarish"
+                            alt="Staff" class="w-full h-full object-cover">
+                    </div>
+                    <div class="text-center pt-12">
+                        <h3 class="text-4xl font-bold text-primary mb-4">300+</h3>
+                        <p class="text-gray-600 mb-6">Services Completed</p>
+                        <p class="text-gray-500 text-sm italic">"Our dedicated team ensures every pet receives personalized attention and care."</p>
+                        <p class="text-primary font-medium mt-4">David R.</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg p-8 relative border border-amber-100">
+                    <div class="w-20 h-20 rounded-full overflow-hidden absolute -top-10 left-1/2 -translate-x-1/2 ring-4 ring-amber-100">
+                        <img src="https://readdy.ai/api/search-image?query=A%20close-up%20portrait%20of%20a%20satisfied%20customer%20giving%20a%20thumbs%20up.%20Professional%20headshot%20with%20warm%20lighting%20and%20blurred%20background%2C%20showing%20complete%20satisfaction%20with%20service.&width=80&height=80&seq=19&orientation=squarish"
+                            alt="Review" class="w-full h-full object-cover">
+                    </div>
+                    <div class="text-center pt-12">
+                        <h3 class="text-4xl font-bold text-primary mb-4">100%</h3>
+                        <p class="text-gray-600 mb-6">Satisfaction Rate</p>
+                        <p class="text-gray-500 text-sm italic">"Perfect service every time. Our pets love coming here and we couldn't be happier!"</p>
+                        <p class="text-primary font-medium mt-4">Emma L.</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg p-8 relative border border-amber-100">
+                    <div class="w-20 h-20 rounded-full overflow-hidden absolute -top-10 left-1/2 -translate-x-1/2 ring-4 ring-amber-100">
+                        <img src="https://readdy.ai/api/search-image?query=A%20close-up%20portrait%20of%20an%20experienced%20pet%20care%20professional%20in%20uniform.%20Professional%20headshot%20with%20warm%20lighting%20and%20blurred%20background%2C%20showing%20years%20of%20expertise%20and%20professionalism.&width=80&height=80&seq=20&orientation=squarish"
+                            alt="Experience" class="w-full h-full object-cover">
+                    </div>
+                    <div class="text-center pt-12">
+                        <h3 class="text-4xl font-bold text-primary mb-4">5+</h3>
+                        <p class="text-gray-600 mb-6">Years Experience</p>
+                        <p class="text-gray-500 text-sm italic">"Years of experience in providing the highest quality pet care services."</p>
+                        <p class="text-primary font-medium mt-4">Michael P.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Featured Service -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row items-center gap-12">
+                <div class="md:w-1/2">
+                    <video class="w-full h-[500px] rounded-lg shadow-lg object-cover" autoplay loop muted playsinline>
+<source src="https://public.readdy.ai/ai/video_res/c92db552-7b15-48a5-a3bb-e88c60ff511e.mp4" type="video/mp4">
+</video>
+                </div>
+                <div class="md:w-1/2">
+                    <h2 class="text-3xl font-bold mb-4">Premium Pet Spa Experience</h2>
+                    <p class="text-gray-600 mb-6">Treat your furry friend to our signature spa day package. This comprehensive service includes:</p>
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-start">
+                            <span class="w-6 h-6 mr-3 text-primary flex-shrink-0 flex items-center justify-center">
+<i class="ri-check-line"></i>
+</span>
+                            <span>Aromatherapy bath with organic shampoo</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="w-6 h-6 mr-3 text-primary flex-shrink-0 flex items-center justify-center">
+<i class="ri-check-line"></i>
+</span>
+                            <span>Relaxing massage and coat conditioning</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="w-6 h-6 mr-3 text-primary flex-shrink-0 flex items-center justify-center">
+<i class="ri-check-line"></i>
+</span>
+                            <span>Gentle paw pad treatment and nail trimming</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="w-6 h-6 mr-3 text-primary flex-shrink-0 flex items-center justify-center">
+<i class="ri-check-line"></i>
+</span>
+                            <span>Teeth brushing and ear cleaning</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="w-6 h-6 mr-3 text-primary flex-shrink-0 flex items-center justify-center">
+<i class="ri-check-line"></i>
+</span>
+                            <span>Finishing spritz and bandana or bow</span>
+                        </li>
+                    </ul>
+                    <button onclick="document.querySelector('#booking-form').scrollIntoView({behavior: 'smooth'})" class="bg-primary text-white px-8 py-3 !rounded-button font-medium hover:bg-amber-600 transition-colors duration-300 whitespace-nowrap">Book Spa Treatment</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Service Benefits -->
+    <section class="pt-24 pb-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold mb-4">The Benefits of Our Services</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">We go above and beyond to ensure your pets receive the best possible care</p>
+            </div>
+            <div class="relative">
+                <div class="overflow-hidden">
+                    <div class="benefits-carousel flex transition-transform duration-300 ease-in-out">
+                        <div class="min-w-full grid md:grid-cols-3 gap-8">
+                            <div class="p-6 bg-[#FFF9F0] rounded-lg">
+                                <div class="w-12 h-12 bg-primary/20 rounded-full flex items-center justify-center mb-4">
+                                    <i class="ri-heart-pulse-line text-primary text-xl"></i>
+                                </div>
+                                <h3 class="text-xl font-bold mb-3">Health & Wellness Focus</h3>
+                                <p class="text-gray-600">Our services are designed to promote your pet's physical health and emotional well-being. We monitor for any signs of health issues during our care.</p>
+                            </div>
+                            <div class="p-6 bg-[#FFF9F0] rounded-lg">
+                                <div class="w-12 h-12 bg-primary/20 rounded-full flex items-center justify-center mb-4">
+                                    <i class="ri-shield-check-line text-primary text-xl"></i>
+                                </div>
+                                <h3 class="text-xl font-bold mb-3">Certified Professionals</h3>
+                                <p class="text-gray-600">All our staff are certified in pet care, first aid, and CPR. We regularly update our training to provide the most current care practices.</p>
+                            </div>
+                            <div class="p-6 bg-[#FFF9F0] rounded-lg">
+                                <div class="w-12 h-12 bg-primary/20 rounded-full flex items-center justify-center mb-4">
+                                    <i class="ri-customer-service-2-line text-primary text-xl"></i>
+                                </div>
+                                <h3 class="text-xl font-bold mb-3">24/7 Customer Support</h3>
+                                <p class="text-gray-600">We're always available to address your concerns. Our customer service team provides prompt responses to ensure your peace of mind.</p>
+                            </div>
+                        </div>
+                        <div class="min-w-full grid md:grid-cols-3 gap-8">
+                            <div class="p-6 bg-[#FFF9F0] rounded-lg">
+                                <div class="w-12 h-12 bg-primary/20 rounded-full flex items-center justify-center mb-4">
+                                    <i class="ri-home-heart-line text-primary text-xl"></i>
+                                </div>
+                                <h3 class="text-xl font-bold mb-3">Comfortable Environment</h3>
+                                <p class="text-gray-600">Our facilities are designed with your pet's comfort in mind. Clean, spacious areas for play and rest with climate control for optimal comfort.</p>
+                            </div>
+                            <div class="p-6 bg-[#FFF9F0] rounded-lg">
+                                <div class="w-12 h-12 bg-primary/20 rounded-full flex items-center justify-center mb-4">
+                                    <i class="ri-calendar-todo-line text-primary text-xl"></i>
+                                </div>
+                                <h3 class="text-xl font-bold mb-3">Flexible Scheduling</h3>
+                                <p class="text-gray-600">We offer convenient booking options to fit your busy lifestyle. Early morning, evening, and weekend appointments are available.</p>
+                            </div>
+                            <div class="p-6 bg-[#FFF9F0] rounded-lg">
+                                <div class="w-12 h-12 bg-primary/20 rounded-full flex items-center justify-center mb-4">
+                                    <i class="ri-smartphone-line text-primary text-xl"></i>
+                                </div>
+                                <h3 class="text-xl font-bold mb-3">Digital Updates</h3>
+                                <p class="text-gray-600">Stay connected with your pet through our mobile app. Receive real-time updates, photos, and videos during your pet's stay with us.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="absolute left-0 top-[40%] transform -translate-y-1/2 -translate-x-1/2 w-12 h-12 bg-white rounded-full shadow-lg flex items-center justify-center hover:bg-gray-50 transition benefits-prev">
+<i class="ri-arrow-left-s-line text-2xl text-gray-600"></i>
+</button>
+                <button class="absolute right-0 top-[40%] transform -translate-y-1/2 translate-x-1/2 w-12 h-12 bg-white rounded-full shadow-lg flex items-center justify-center hover:bg-gray-50 transition benefits-next">
+<i class="ri-arrow-right-s-line text-2xl text-gray-600"></i>
+</button>
+                <div class="flex justify-center mt-8 space-x-2">
+                    <button class="w-2 h-2 rounded-full bg-primary benefits-dot active" data-index="0"></button>
+                    <button class="w-2 h-2 rounded-full bg-gray-300 benefits-dot" data-index="1"></button>
+                </div>
+            </div>
+            <script>
+                document.addEventListener('DOMContentLoaded', function() {
+                    const carousel = document.querySelector('.benefits-carousel');
+                    const prevBtn = document.querySelector('.benefits-prev');
+                    const nextBtn = document.querySelector('.benefits-next');
+                    const dots = document.querySelectorAll('.benefits-dot');
+                    let currentIndex = 0;
+                    const totalSlides = 2;
+
+                    function updateCarousel() {
+                        carousel.style.transform = `translateX(-${currentIndex * 100}%)`;
+                        dots.forEach((dot, index) => {
+                            if (index === currentIndex) {
+                                dot.classList.add('bg-primary');
+                                dot.classList.remove('bg-gray-300');
+                            } else {
+                                dot.classList.remove('bg-primary');
+                                dot.classList.add('bg-gray-300');
+                            }
+                        });
+                    }
+                    prevBtn.addEventListener('click', () => {
+                        currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+                        updateCarousel();
+                    });
+                    nextBtn.addEventListener('click', () => {
+                        currentIndex = (currentIndex + 1) % totalSlides;
+                        updateCarousel();
+                    });
+                    dots.forEach((dot, index) => {
+                        dot.addEventListener('click', () => {
+                            currentIndex = index;
+                            updateCarousel();
+                        });
+                    });
+                });
+            </script>
+        </div>
+    </section>
+    <!-- Testimonials -->
+    <section class="py-16 bg-[#FFF9F0]">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold mb-4">What Our Clients Say</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Hear from pet parents who trust us with their beloved companions</p>
+            </div>
+            <div class="overflow-hidden">
+                <div class="testimonial-slider flex gap-8 animate-scroll">
+                    <div class="bg-white p-6 rounded-lg shadow-md min-w-[400px]">
+                        <div class="flex items-center mb-4">
+                            <img src="https://readdy.ai/api/search-image?query=A%20close-up%20portrait%20of%20a%20happy%20golden%20retriever%20with%20a%20woman%20partially%20visible%20hugging%20the%20dog.%20The%20woman%20has%20shoulder-length%20brown%20hair%20and%20is%20smiling.%20The%20image%20focuses%20on%20both%20their%20faces%20showing%20their%20bond.%20The%20background%20is%20softly%20blurred%2C%20creating%20a%20warm%2C%20intimate%20portrait%20of%20pet%20ownership.&width=80&height=80&seq=8&orientation=squarish"
+                                alt="Client" class="w-12 h-12 rounded-full object-cover mr-4">
+                            <div>
+                                <h4 class="font-bold">Emily Richardson</h4>
+                                <div class="flex text-amber-400">
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-fill"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="text-gray-600">"The grooming service was exceptional! My golden retriever Bailey usually gets anxious during grooming, but the staff was so patient and gentle. He came home looking and smelling amazing!"</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-md min-w-[400px]">
+                        <div class="flex items-center mb-4">
+                            <img src="https://readdy.ai/api/search-image?query=A%20close-up%20portrait%20of%20a%20middle-aged%20man%20with%20short%20dark%20hair%20and%20glasses%20smiling%20next%20to%20a%20border%20collie.%20The%20man%20and%20dog%20are%20looking%20at%20the%20camera%2C%20showing%20their%20close%20bond.%20The%20background%20is%20softly%20blurred%2C%20creating%20a%20warm%2C%20intimate%20portrait%20of%20pet%20ownership.&width=80&height=80&seq=9&orientation=squarish"
+                                alt="Client" class="w-12 h-12 rounded-full object-cover mr-4">
+                            <div>
+                                <h4 class="font-bold">Michael Thompson</h4>
+                                <div class="flex text-amber-400">
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-fill"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="text-gray-600">"I've been using their dog walking service for over a year now. Max always comes back happy and tired. The walkers send photos during each walk and detailed reports. Couldn't be happier!"</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-md min-w-[400px]">
+                        <div class="flex items-center mb-4">
+                            <img src="https://readdy.ai/api/search-image?query=A%20close-up%20portrait%20of%20a%20young%20woman%20with%20long%20blonde%20hair%20smiling%20next%20to%20a%20small%20white%20fluffy%20dog.%20The%20woman%20and%20dog%20are%20looking%20at%20the%20camera%2C%20showing%20their%20close%20bond.%20The%20background%20is%20softly%20blurred%2C%20creating%20a%20warm%2C%20intimate%20portrait%20of%20pet%20ownership.&width=80&height=80&seq=10&orientation=squarish"
+                                alt="Client" class="w-12 h-12 rounded-full object-cover mr-4">
+                            <div>
+                                <h4 class="font-bold">Sophia Martinez</h4>
+                                <div class="flex text-amber-400">
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-half-fill"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="text-gray-600">"The training sessions have been life-changing for my Maltese, Bella. She was so anxious and reactive before, but after just 6 weeks, she's like a different dog. Worth every penny!"</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-md min-w-[400px]">
+                        <div class="flex items-center mb-4">
+                            <img src="https://readdy.ai/api/search-image?query=A%20close-up%20portrait%20of%20a%20mature%20woman%20with%20silver%20hair%20smiling%20warmly%20while%20holding%20her%20Persian%20cat.%20The%20woman%20and%20cat%20share%20a%20loving%20bond%2C%20evident%20in%20their%20comfortable%20pose.%20The%20background%20is%20softly%20blurred%2C%20creating%20an%20elegant%20portrait%20of%20pet%20ownership.&width=80&height=80&seq=21&orientation=squarish"
+                                alt="Client" class="w-12 h-12 rounded-full object-cover mr-4">
+                            <div>
+                                <h4 class="font-bold">Patricia Anderson</h4>
+                                <div class="flex text-amber-400">
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-fill"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="text-gray-600">"The pet spa service is absolutely wonderful! My Persian cat usually dislikes grooming, but the staff here made her feel so comfortable. The aromatherapy treatment was a lovely touch!"</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-md min-w-[400px]">
+                        <div class="flex items-center mb-4">
+                            <img src="https://readdy.ai/api/search-image?query=A%20close-up%20portrait%20of%20a%20young%20professional%20man%20with%20styled%20hair%20and%20a%20friendly%20smile%2C%20posing%20with%20his%20energetic%20Australian%20Shepherd.%20Both%20look%20happy%20and%20well-groomed.%20The%20background%20is%20softly%20blurred%2C%20showing%20a%20modern%20urban%20setting.&width=80&height=80&seq=22&orientation=squarish"
+                                alt="Client" class="w-12 h-12 rounded-full object-cover mr-4">
+                            <div>
+                                <h4 class="font-bold">James Wilson</h4>
+                                <div class="flex text-amber-400">
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-fill"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="text-gray-600">"Their daycare service is fantastic! My Australian Shepherd has so much energy, and they keep him engaged and happy all day. The daily activity reports and photos are a great touch!"</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Gallery -->
+    <section class="py-16 bg-[#FFF9F0]">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold mb-4">Our Pet Care Gallery</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">See our work and happy pet clients</p>
+            </div>
+            <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+                <div class="rounded-lg overflow-hidden shadow-md">
+                    <img src="https://readdy.ai/api/search-image?query=A%20professional%20pet%20groomer%20styling%20a%20fluffy%20white%20dog%20in%20a%20modern%20grooming%20salon.%20The%20groomer%20is%20using%20scissors%20to%20carefully%20trim%20the%20dogs%20fur.%20The%20dog%20is%20standing%20calmly%20on%20a%20grooming%20table.%20The%20salon%20is%20clean%20and%20well-equipped%20with%20professional%20grooming%20tools%20visible%20in%20the%20background.&width=400&height=300&seq=11&orientation=landscape"
+                        alt="Pet Grooming" class="w-full h-64 object-cover object-top">
+                </div>
+                <div class="rounded-lg overflow-hidden shadow-md">
+                    <img src="https://readdy.ai/api/search-image?query=A%20happy%20golden%20retriever%20playing%20with%20a%20ball%20in%20a%20spacious%20indoor%20pet%20daycare%20facility.%20Other%20dogs%20can%20be%20seen%20playing%20in%20the%20background.%20The%20facility%20is%20clean%2C%20bright%2C%20and%20colorful%20with%20pet-safe%20toys%20scattered%20around.%20A%20pet%20care%20staff%20member%20is%20visible%20supervising%20the%20play%20session.&width=400&height=300&seq=12&orientation=landscape"
+                        alt="Pet Daycare" class="w-full h-64 object-cover object-top">
+                </div>
+                <div class="rounded-lg overflow-hidden shadow-md">
+                    <img src="https://readdy.ai/api/search-image?query=A%20professional%20dog%20trainer%20working%20with%20a%20German%20Shepherd%20in%20a%20training%20session.%20The%20trainer%20is%20demonstrating%20a%20sit-stay%20command%20while%20the%20dog%20attentively%20follows%20instructions.%20They%20are%20in%20a%20professional%20training%20facility%20with%20training%20equipment%20visible.%20The%20atmosphere%20shows%20positive%20reinforcement%20training%20methods%20being%20used.&width=400&height=300&seq=13&orientation=landscape"
+                        alt="Dog Training" class="w-full h-64 object-cover object-top">
+                </div>
+                <div class="rounded-lg overflow-hidden shadow-md">
+                    <img src="https://readdy.ai/api/search-image?query=A%20small%20dog%20receiving%20a%20luxurious%20bath%20in%20a%20pet%20spa.%20The%20dog%20is%20covered%20in%20bubbles%20and%20looks%20content.%20The%20groomer%20is%20gently%20washing%20the%20dog%20using%20premium%20pet%20shampoo%20products%20that%20are%20visible%20nearby.%20The%20bathing%20station%20is%20modern%20and%20well-equipped%20with%20a%20hand-held%20shower%20attachment.&width=400&height=300&seq=14&orientation=landscape"
+                        alt="Pet Spa" class="w-full h-64 object-cover object-top">
+                </div>
+                <div class="rounded-lg overflow-hidden shadow-md">
+                    <img src="https://readdy.ai/api/search-image?query=A%20professional%20dog%20walker%20taking%20multiple%20dogs%20of%20different%20breeds%20and%20sizes%20on%20leashes%20through%20a%20park.%20The%20dogs%20are%20walking%20nicely%20together%20on%20a%20path%20surrounded%20by%20trees%20and%20grass.%20The%20walker%20is%20attentive%20and%20professional%2C%20managing%20all%20the%20dogs%20skillfully.%20The%20scene%20shows%20a%20beautiful%20sunny%20day%20in%20a%20well-maintained%20park.&width=400&height=300&seq=15&orientation=landscape"
+                        alt="Dog Walking" class="w-full h-64 object-cover object-top">
+                </div>
+                <div class="rounded-lg overflow-hidden shadow-md">
+                    <img src="https://readdy.ai/api/search-image?query=A%20cat%20being%20gently%20examined%20by%20a%20pet%20care%20specialist%20in%20a%20clean%2C%20modern%20facility.%20The%20specialist%20is%20checking%20the%20cats%20ears%20while%20the%20cat%20appears%20calm%20and%20comfortable.%20The%20examination%20table%20is%20clean%20and%20the%20room%20has%20professional%20pet%20care%20equipment%20visible.%20The%20lighting%20is%20soft%20and%20the%20atmosphere%20is%20calming.&width=400&height=300&seq=16&orientation=landscape"
+                        alt="Cat Care" class="w-full h-64 object-cover object-top">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Contact Form -->
+    <section id="booking-form" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-2xl mx-auto">
+                <h2 class="text-3xl font-bold mb-4 text-center">Book Your Pet's Service</h2>
+                <p class="text-gray-600 mb-8 text-center">Fill out the form below and we'll get back to you within 24 hours to confirm your appointment.</p>
+                <form class="max-w-xl mx-auto">
+                    <div class="grid md:grid-cols-2 gap-6 mb-6">
+                        <div>
+                            <label for="firstName" class="block text-gray-700 mb-2">First Name</label>
+                            <input type="text" id="firstName" class="w-full px-4 py-3 border border-gray-300 rounded focus:border-primary focus:ring-1 focus:ring-primary" placeholder="Your first name">
+                        </div>
+                        <div>
+                            <label for="lastName" class="block text-gray-700 mb-2">Last Name</label>
+                            <input type="text" id="lastName" class="w-full px-4 py-3 border border-gray-300 rounded focus:border-primary focus:ring-1 focus:ring-primary" placeholder="Your last name">
+                        </div>
+                    </div>
+                    <div class="mb-6">
+                        <label for="email" class="block text-gray-700 mb-2">Email Address</label>
+                        <input type="email" id="email" class="w-full px-4 py-3 border border-gray-300 rounded focus:border-primary focus:ring-1 focus:ring-primary" placeholder="Your email address">
+                    </div>
+                    <div class="mb-6">
+                        <label for="phone" class="block text-gray-700 mb-2">Phone Number</label>
+                        <input type="tel" id="phone" class="w-full px-4 py-3 border border-gray-300 rounded focus:border-primary focus:ring-1 focus:ring-primary" placeholder="Your phone number">
+                    </div>
+                    <div class="mb-6">
+                        <label for="petType" class="block text-gray-700 mb-2">Pet Type</label>
+                        <div class="relative">
+                            <select id="petType" class="w-full px-4 py-3 border border-gray-300 rounded appearance-none focus:border-primary focus:ring-1 focus:ring-primary pr-8">
+<option value="" disabled selected>Select your pet type</option>
+<option value="dog">Dog</option>
+<option value="cat">Cat</option>
+<option value="other">Other</option>
+</select>
+                            <div class="absolute right-3 top-1/2 transform -translate-y-1/2 pointer-events-none">
+                                <i class="ri-arrow-down-s-line text-gray-400"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mb-6">
+                        <label for="service" class="block text-gray-700 mb-2">Service Needed</label>
+                        <div class="relative">
+                            <select id="service" class="w-full px-4 py-3 border border-gray-300 rounded appearance-none focus:border-primary focus:ring-1 focus:ring-primary pr-8">
+<option value="" disabled selected>Select a service</option>
+<option value="grooming">Grooming</option>
+<option value="daycare">Daycare</option>
+<option value="walking">Dog Walking</option>
+<option value="training">Training</option>
+<option value="spa">Spa Treatment</option>
+</select>
+                            <div class="absolute right-3 top-1/2 transform -translate-y-1/2 pointer-events-none">
+                                <i class="ri-arrow-down-s-line text-gray-400"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mb-8">
+                        <label for="message" class="block text-gray-700 mb-2">Special Instructions</label>
+                        <textarea id="message" rows="4" class="w-full px-4 py-3 border border-gray-300 rounded focus:border-primary focus:ring-1 focus:ring-primary" placeholder="Any special needs or requests for your pet"></textarea>
+                    </div>
+                    <div class="flex justify-center">
+                        <button type="submit" class="bg-primary text-white px-12 py-4 !rounded-button font-medium hover:bg-amber-600 transition-colors duration-300 whitespace-nowrap text-lg">Book Appointment</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+    <!-- Dark Banner -->
+    <section class="py-16 bg-gray-900 relative">
+        <div style="background-image: url('https://readdy.ai/api/search-image?query=A%20luxurious%20modern%20pet%20care%20facility%20interior%20at%20night%20with%20warm%20ambient%20lighting.%20The%20space%20features%20elegant%20grooming%20stations%2C%20comfortable%20seating%20areas%2C%20and%20high-end%20equipment.%20The%20dark%20moody%20atmosphere%20is%20enhanced%20by%20subtle%20lighting%20that%20creates%20a%20premium%2C%20sophisticated%20environment.%20The%20interior%20design%20combines%20functionality%20with%20luxury%2C%20showing%20glass%20partitions%2C%20wood%20accents%2C%20and%20metallic%20details.%20The%20scene%20captures%20the%20essence%20of%20professional%20pet%20care%20in%20a%20high-end%20setting.&width=1200&height=500&seq=23&orientation=landscape'); background-size: cover; background-position: center; opacity: 0.3; position: absolute; top: 0; left: 0; right: 0; bottom: 0;"></div>
+        <div class="container mx-auto px-4 relative">
+            <div class="max-w-2xl mx-auto text-center">
+                <h2 class="text-3xl font-bold text-white mb-6">Your Pet Deserves The Best Care</h2>
+                <p class="text-gray-300 mb-8">Our professional team is dedicated to providing exceptional care that meets your pet's unique needs. We treat every animal as if they were our own.</p>
+                <button onclick="document.querySelector('#booking-form').scrollIntoView({behavior: 'smooth'})" class="bg-primary text-white px-8 py-3 !rounded-button font-medium hover:bg-amber-600 transition-colors duration-300 whitespace-nowrap">Schedule a Consultation</button>
+            </div>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white pt-16 pb-8">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8 mb-12">
+                <div>
+                    <h3 class="text-2xl font-['Pacifico'] text-primary mb-6">logo</h3>
+                    <p class="text-gray-400 mb-6">Providing exceptional pet care services since 2020. Our mission is to ensure every pet receives the love and attention they deserve.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 border border-gray-700 rounded-full flex items-center justify-center hover:bg-gray-800 transition">
+<i class="ri-facebook-fill text-gray-400"></i>
+</a>
+                        <a href="#" class="w-10 h-10 border border-gray-700 rounded-full flex items-center justify-center hover:bg-gray-800 transition">
+<i class="ri-instagram-line text-gray-400"></i>
+</a>
+                        <a href="#" class="w-10 h-10 border border-gray-700 rounded-full flex items-center justify-center hover:bg-gray-800 transition">
+<i class="ri-twitter-x-line text-gray-400"></i>
+</a>
+                        <a href="#" class="w-10 h-10 border border-gray-700 rounded-full flex items-center justify-center hover:bg-gray-800 transition">
+<i class="ri-youtube-line text-gray-400"></i>
+</a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-6">Quick Links</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-gray-400 hover:text-primary transition">Home</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-primary transition">About Us</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-primary transition">Services</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-primary transition">Pricing</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-primary transition">Contact</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-primary transition">Blog</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-6">Services</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-gray-400 hover:text-primary transition">Pet Grooming</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-primary transition">Pet Sitting & Daycare</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-primary transition">Dog Walking</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-primary transition">Training & Behavior</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-primary transition">Pet Spa Treatments</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-primary transition">Pet Transportation</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-6">Newsletter</h4>
+                    <p class="text-gray-400 mb-4">Subscribe to receive updates, access to exclusive deals, and more.</p>
+                    <form class="mb-4">
+                        <div class="flex">
+                            <input type="email" placeholder="Your email address" class="w-full px-4 py-3 rounded-l border-none focus:outline-none text-gray-800">
+                            <button type="submit" class="bg-primary text-white px-4 py-3 rounded-r hover:bg-amber-600 transition-colors duration-300 whitespace-nowrap">Subscribe</button>
+                        </div>
+                    </form>
+                    <div>
+                        <h5 class="font-medium mb-3">We Accept</h5>
+                        <div class="flex space-x-3">
+                            <div class="w-10 h-6 bg-white rounded flex items-center justify-center">
+                                <i class="ri-visa-fill text-blue-800"></i>
+                            </div>
+                            <div class="w-10 h-6 bg-white rounded flex items-center justify-center">
+                                <i class="ri-mastercard-fill text-red-500"></i>
+                            </div>
+                            <div class="w-10 h-6 bg-white rounded flex items-center justify-center">
+                                <i class="ri-paypal-fill text-blue-600"></i>
+                            </div>
+                            <div class="w-10 h-6 bg-white rounded flex items-center justify-center">
+                                <i class="ri-apple-fill"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <p class="text-gray-500 mb-4 md:mb-0">© 2025 Pet Care Services. All rights reserved.</p>
+                    <div class="flex space-x-6">
+                        <a href="#" class="text-gray-500 hover:text-gray-300 transition">Privacy Policy</a>
+                        <a href="#" class="text-gray-500 hover:text-gray-300 transition">Terms of Service</a>
+                        <a href="#" class="text-gray-500 hover:text-gray-300 transition">Cookie Policy</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <style>
+        @keyframes scroll {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(-200%);
+            }
+        }
+
+        .animate-scroll {
+            animation: scroll 30s linear infinite;
+        }
+
+        .testimonial-slider:hover {
+            animation-play-state: paused;
+        }
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Mobile menu toggle
+            const menuButton = document.querySelector('.md\\:hidden');
+            const mobileMenu = document.querySelector('nav');
+            // Pricing card selection
+            const pricingCards = document.querySelectorAll('.pricing-card');
+            pricingCards.forEach(card => {
+                card.addEventListener('click', function(e) {
+                    // Reset all cards
+                    pricingCards.forEach(c => {
+                        c.classList.remove('border-2', 'border-primary', 'shadow-lg');
+                        c.classList.add('border', 'border-gray-200');
+                        c.dataset.selected = 'false';
+                        // Reset button styles
+                        const button = c.querySelector('button');
+                        if (button) {
+                            button.className = 'w-full bg-white text-primary border border-primary px-6 py-3 !rounded-button font-medium hover:bg-primary/5 transition whitespace-nowrap';
+                        }
+                    });
+                    // Style clicked card
+                    this.classList.remove('border', 'border-gray-200');
+                    this.classList.add('border-2', 'border-primary', 'shadow-lg');
+                    this.dataset.selected = 'true';
+                    // Update button style
+                    const button = this.querySelector('button');
+                    if (button) {
+                        button.className = 'w-full bg-primary text-white px-6 py-3 !rounded-button font-medium hover:bg-amber-600 transition-colors duration-300 whitespace-nowrap';
+                    }
+                });
+            });
+            if (menuButton && mobileMenu) {
+                menuButton.addEventListener('click', function() {
+                    mobileMenu.classList.toggle('hidden');
+                    mobileMenu.classList.toggle('flex');
+                    mobileMenu.classList.toggle('flex-col');
+                    mobileMenu.classList.toggle('absolute');
+                    mobileMenu.classList.toggle('top-16');
+                    mobileMenu.classList.toggle('right-4');
+                    mobileMenu.classList.toggle('bg-white');
+                    mobileMenu.classList.toggle('p-4');
+                    mobileMenu.classList.toggle('rounded');
+                    mobileMenu.classList.toggle('shadow-lg');
+                    mobileMenu.classList.toggle('z-50');
+                });
+            }
+            // Clone testimonials for continuous scroll
+            const slider = document.querySelector('.testimonial-slider');
+            const testimonials = slider.innerHTML;
+            slider.innerHTML = testimonials + testimonials;
+        });
+    </script>
+    <script>
+        ! function(t, e) {
+            var o, n, p, r;
+            e.__SV || (window.posthog = e, e._i = [], e.init = function(i, s, a) {
+                function g(t, e) {
+                    var o = e.split(".");
+                    2 == o.length && (t = t[o[0]], e = o[1]), t[e] = function() {
+                        t.push([e].concat(Array.prototype.slice.call(arguments, 0)))
+                    }
+                }(p = t.createElement("script")).type = "text/javascript", p.crossOrigin = "anonymous", p.async = !0, p.src = s.api_host.replace(".i.posthog.com", "-assets.i.posthog.com") + "/static/array.js", (r = t.getElementsByTagName("script")[0]).parentNode.insertBefore(p, r);
+                var u = e;
+                for (void 0 !== a ? u = e[a] = [] : a = "posthog", u.people = u.people || [], u.toString = function(t) {
+                        var e = "posthog";
+                        return "posthog" !== a && (e += "." + a), t || (e += " (stub)"), e
+                    }, u.people.toString = function() {
+                        return u.toString(1) + ".people (stub)"
+                    }, o = "init capture register register_once register_for_session unregister unregister_for_session getFeatureFlag getFeatureFlagPayload isFeatureEnabled reloadFeatureFlags updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures on onFeatureFlags onSessionId getSurveys getActiveMatchingSurveys renderSurvey canRenderSurvey getNextSurveyStep identify setPersonProperties group resetGroups setPersonPropertiesForFlags resetPersonPropertiesForFlags setGroupPropertiesForFlags resetGroupPropertiesForFlags reset get_distinct_id getGroups get_session_id get_session_replay_url alias set_config startSessionRecording stopSessionRecording sessionRecordingStarted captureException loadToolbar get_property getSessionProperty createPersonProfile opt_in_capturing opt_out_capturing has_opted_in_capturing has_opted_out_capturing clear_opt_in_out_capturing debug".split(" "), n = 0; n < o.length; n++) g(u, o[n]);
+                e._i.push([i, s, a])
+            }, e.__SV = 1)
+        }(document, window.posthog || []);
+        posthog.init('phc_t9tkQZJiyi2ps9zUYm8TDsL6qXo4YmZx0Ot5rBlAlEd', {
+            api_host: 'https://us.i.posthog.com',
+            autocapture: false,
+            capture_pageview: false,
+            capture_pageleave: false,
+            capture_performance: {
+                web_vitals: false,
+            },
+            rageclick: false,
+        })
+        window.shareKey = 'rXzx0c7TYjs-jVHqnaH1Rw';
+        window.host = 'readdy.ai';
+    </script>
+    <script src="https://static.readdy.ai/static/share.js"></script>
+</body>
+
+</html>
